@@ -75,7 +75,7 @@ section {
 .home {
   padding: 20px 650px 10px 120px;
   position: relative;
-  background-image: url(https://img.freepik.com/premium-photo/sports-game-background_670382-206314.jpg);
+  background-image: url(https://img.freepik.com/free-photo/sports-stadium-with-lights-photography_1409-4809.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -232,20 +232,20 @@ header.sticky {
 .card h6 {
   position: absolute;
   left: 25px;
-  bottom: 95px;
+  bottom: 145px;
   font-size: 18px;
   font-weight: 500;
 }
 .card p {
   position: absolute;
   left: 25px;
-  bottom: 65px;
+  bottom: 45px;
   font-size: 20px;
   font-weight: 700;
 }
 .card img:hover {
   filter: brightness(90%) hue-rotate(50deg);
-
+  border: 3px white solid;
   transform: scale(1.04);
   cursor: pointer;
 }
