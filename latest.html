@@ -4,180 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sports News App</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: black;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: white;
-      }
-      .news-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-around;
-      }
-      .news-card {
-        flex: 0 1 30%;
-        display: flex;
-      }
-      .card {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        width: 100%;
-      }
-      .card-img-top {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 1px solid #ddd;
-      }
-      .card-body {
-        padding: 15px;
-      }
-      .card-title {
-        font-size: 1.25em;
-        margin-bottom: 10px;
-      }
-      .text-muted {
-        display: block;
-        margin-bottom: 15px;
-      }
-      .card-text {
-        margin-bottom: 15px;
-      }
-      .btn {
-        background-color: #343a40;
-        color: #fff;
-        text-align: center;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      .btn:hover {
-        background-color: #23272b;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/latest.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header>
+      <a href="#" class="logo"
+        ><img src="images/logo.png" width="200px" height="110px"
+      /></a>
+      <ul class="navigation">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">EXPLORE</a></li>
+        <li><a href="#">LATEST</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">QUESTIONNAIRE</a></li>
+      </ul>
+      <div class="navtabs">
+        <a href="">Follow us</a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="ri-instagram-fill"></i
+        ></a>
+        <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
+        <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
+        <div class="bx bx-menu" id="menu"></div>
+      </div>
+    </header>
+    <section class="home">
+      <div class="headings">
+        <h5>YOUR</h5>
+        <h1>Sports Journey<br />Simplified</h1>
+        <p>
+          Finding your ideal sport can be tough, but our expertly crafted quiz
+          makes it easy. By considering your strengths, interests, and goals, it
+          gives personalized sport recommendations, helping you discover the
+          perfect fit, whether you're looking to stay active, compete, or just
+          enjoy yourself.
+        </p>
+      </div>
+    </section>
     <div class="container">
-      <h1>Sports News</h1>
       <div id="news-details" class="news-container"></div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const apiKey = "02b5eb252808641b434b28b2f63b9fbf";
-        const searchTerms = [
-          "football",
-          "basketball",
-          "badminton",
-          "tennis",
-          "table tennis",
-          "hockey",
-          "skating",
-          "wrestling",
-        ];
-        const randomSearchTerm =
-          searchTerms[Math.floor(Math.random() * searchTerms.length)];
-        const apiUrl = `https://gnews.io/api/v4/search?q=${randomSearchTerm}&token=${apiKey}&lang=en&max=9`;
-
-        const newsContainer = document.getElementById("news-details");
-        const seenUrls = new Set();
-        newsContainer.innerHTML = "";
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", apiUrl, true);
-
-        xhr.onload = function () {
-          if (xhr.status >= 200 && xhr.status < 300) {
-            const data = JSON.parse(xhr.responseText);
-            console.log("API Response:", data);
-            if (!data.articles || data.articles.length === 0) {
-              newsContainer.innerHTML = "<p>No sports news found.</p>";
-            } else {
-              displayNews(data.articles);
-            }
-          } else {
-            console.error("Error fetching the news:", xhr.statusText);
-            newsContainer.innerHTML =
-              "<p>Failed to load news. Please try again later.</p>";
-          }
-        };
-
-        xhr.onerror = function () {
-          console.error("Error fetching the news:", xhr.statusText);
-          newsContainer.innerHTML =
-            "<p>Failed to load news. Please try again later.</p>";
-        };
-
-        xhr.send();
-
-        function displayNews(newsArray) {
-          newsArray.forEach((news) => {
-            if (!seenUrls.has(news.url)) {
-              seenUrls.add(news.url);
-
-              const col = document.createElement("div");
-              col.classList.add("news-card");
-
-              const card = document.createElement("div");
-              card.className = "card";
-
-              const image = document.createElement("img");
-              image.className = "card-img-top";
-              image.src = news.image || "default-image.jpg";
-
-              const cardBody = document.createElement("div");
-              cardBody.className = "card-body";
-
-              const newsHeading = document.createElement("h5");
-              newsHeading.className = "card-title";
-              newsHeading.textContent = news.title;
-
-              const dateHeading = document.createElement("small");
-              dateHeading.className = "text-muted";
-              const date = new Date(news.publishedAt);
-              dateHeading.textContent = `Published on: ${date.toDateString()}`;
-
-              const description = document.createElement("p");
-              description.className = "card-text";
-              description.textContent =
-                news.description || "No description available";
-
-              const link = document.createElement("a");
-              link.className = "btn";
-              link.setAttribute("target", "_blank");
-              link.href = news.url;
-              link.textContent = "Read more";
-
-              cardBody.appendChild(newsHeading);
-              cardBody.appendChild(dateHeading);
-              cardBody.appendChild(description);
-              cardBody.appendChild(link);
-
-              card.appendChild(image);
-              card.appendChild(cardBody);
-
-              col.appendChild(card);
-
-              newsContainer.appendChild(col);
-            }
-          });
-        }
-      });
-    </script>
+    <script src="javascript/latest.js"></script>
   </body>
 </html>
