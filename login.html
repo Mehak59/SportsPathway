@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportsPathway</title>
+    <link rel="stylesheet" href="styles/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"
+        ><img src="images/logo.png" width="200px" height="110px"
+      /></a>
+      <ul class="navigation">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="explore.html">EXPLORE</a></li>
+        <li><a href="latest.html">LATEST</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="questionnaire.html">QUESTIONNAIRE</a></li>
+      </ul>
+      <div class="navtabs">
+        <a href="">Follow us</a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="ri-instagram-fill"></i
+        ></a>
+        <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
+        <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
+        <div class="bx bx-menu" id="menu"></div>
+      </div>
+    </header>
+    <section class="home">
+        <div class="container">
+            <div class="content">
+              <div class="text">
+                <h2>WELCOME<br /><span> To The Best Countdown Timer </span></h2>
+                <p>
+                  It will help you effectively manage time for various<br />
+                  tasks and activities.
+                </p>
+              </div>
+            </div>
+            <div class="loginbox">
+              <div class="form-box login">
+                <form action="#">
+                  <h2>SIGN IN</h2>
+                  <div class="input">
+                    <span class="icon"><i class="bx bx-user"></i></span>
+                    <input type="text" required />
+                    <label>USERNAME</label>
+                  </div>
+                  <div class="input">
+                    <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+                    <input type="password" required />
+                    <label>PASSWORD</label>
+                  </div>
+                  <div class="rememberandforget">
+                    <label> <input type="checkbox" />Remember me</label>
+                    <a href="forgot.html">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="subbutton">SIGN IN</button>
+                  <div class="loginandregister">
+                    <p>
+                      Don't have an account?<a href="#" class="register-link"
+                        >Sign up</a
+                      >
+                    </p>
+                  </div>
+                </form>
+              </div>
+              <div class="form-box register">
+                <form action="#">
+                  <h2>SIGN UP</h2>
+    
+                  <div class="input">
+                    <span class="icon"><i class="bx bx-envelope"></i></span>
+                    <input type="email" required />
+                    <label>EMAIL</label>
+                  </div>
+                  <div class="input">
+                    <span class="icon"><i class="bx bx-user"></i></span>
+                    <input type="text" required />
+                    <label>USERNAME</label>
+                  </div>
+                  <div class="input">
+                    <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+                    <input type="password" required />
+                    <label>PASSWORD</label>
+                  </div>
+                  <div class="rememberandforget">
+                    <label>
+                      <input type="checkbox" />I Agree To Terms and
+                      Conditions</label
+                    >
+                  </div>
+                  <button type="submit" class="subbutton">SIGN UP</button>
+                  <div class="loginandregister">
+                    <p>
+                      Already have an account?<a href="#" class="login-link"
+                        >Sign in</a
+                      >
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+    
+    </section>
+    <script src="javascript/login.js"></script>
+  </body>
+</html>

@@ -23,7 +23,6 @@ function showPrev(current) {
 }
 
 function submitQuiz() {
-    // Collect responses
     let responses = {};
     for (let i = 1; i <= 20; i++) {
         const selected = document.querySelector(`input[name="q${i}"]:checked`);

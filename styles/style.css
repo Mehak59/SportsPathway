@@ -280,7 +280,7 @@ header.sticky {
   margin-bottom: 20px;
 }
 #calendar {
-  width: 450px; /* Set a small width for the calendar */
+  width: 450px;
 
   background-color: white;
   padding: 10px;
@@ -290,28 +290,28 @@ header.sticky {
 
 .fc-toolbar-title {
   color: black;
-  font-size: 1rem; /* Adjust toolbar title size */
+  font-size: 1rem;
 }
 
 .fc-header-toolbar {
-  font-size: 0.75rem; /* Smaller toolbar font size */
+  font-size: 0.75rem;
 }
 
 .fc-daygrid-day-number {
   color: black;
-  font-size: 0.8rem; /* Adjust day number size */
+  font-size: 0.8rem;
 }
 
 .fc-event {
-  font-size: 0.7rem; /* Event title size */
+  font-size: 0.7rem;
 }
 
 .fc .fc-daygrid-day-top {
-  padding: 2px; /* Adjust padding for better visibility */
+  padding: 2px;
 }
 
 .fc .fc-scrollgrid {
-  font-size: 0.8rem; /* Overall calendar font size */
+  font-size: 0.8rem;
 }
 .footer {
   margin-top: 40px;

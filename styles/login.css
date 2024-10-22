@@ -1,0 +1,237 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.logo {
+  margin-left: 80px;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 15px 22px;
+  transition: all 0.5s ease;
+}
+
+.navigation a:hover {
+  color: coral;
+}
+
+.navtabs {
+  display: flex;
+  margin-right: 95px;
+}
+
+.navtabs a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 10px;
+  transition: all 0.5s ease;
+}
+
+.navtabs a:hover {
+  color: coral;
+  transform: translateY(-3px);
+}
+
+#menu {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  position: fixed;
+}
+
+.home {
+  padding: 20px 650px 10px 120px;
+  position: relative;
+  background-image: url(https://img.freepik.com/free-photo/sports-stadium-with-lights-photography_1409-4809.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container {
+  position: absolute;
+  width: 70%;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  margin-left: 120px;
+  border-radius: 15px;
+}
+.container .content {
+  position: absolute;
+  left: 0;
+  width: 63%;
+  height: 100%;
+  background: transparent;
+  color: black;
+}
+.content h2 {
+  font-size: 40px;
+  font-weight: 500;
+  padding-top: 150px;
+  padding-left: 60px;
+  line-height: 1;
+  color: coral;
+  letter-spacing: 4px;
+}
+.content h2 span {
+  font-size: 25px;
+  color: white;
+}
+.container p {
+  font-size: 20px;
+  padding-left: 60px;
+  color: lightgray;
+}
+.container .loginbox {
+  position: absolute;
+  right: 0;
+  width: 37%;
+  height: 100%;
+  overflow: hidden;
+}
+.loginbox .form-box.login {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+  transition-delay: 0.7s;
+}
+.loginbox.active .form-box.login {
+  transform: translateX(430px);
+  transition-delay: 0s;
+}
+.loginbox .form-box.register {
+  transform: translateX(430px);
+  transition: transform 0.6s ease;
+  transition-delay: 0s;
+}
+.loginbox.active .form-box.register {
+  transform: translateX(0);
+  transition-delay: 0.7s;
+}
+.loginbox .form-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.loginbox .form-box.register {
+  transform: translate(430px);
+}
+.form-box h2 {
+  font-size: 32px;
+  text-align: center;
+  color: coral;
+}
+.form-box .input {
+  position: relative;
+  width: 340px;
+  height: 50px;
+  border-bottom: 2px solid black;
+  margin: 30px 0;
+}
+.input input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: -5px;
+}
+.input .icon {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  font-size: 19px;
+}
+.form-box .rememberandforget {
+  font-size: 15.5px;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.rememberandforget a {
+  text-decoration: none;
+  color: lightgray;
+}
+.rememberandforget label input {
+  margin-right: 3px;
+}
+.rememberandforget a:hover {
+  text-decoration: underline;
+}
+.subbutton {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+.form-box .loginandregister {
+  font-size: 13px;
+}
+.form-box .loginandregister a {
+  text-decoration: none;
+  color: coral;
+}
+.form-box .loginandregister a:hover {
+  text-decoration: underline;
+}
