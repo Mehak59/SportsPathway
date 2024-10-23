@@ -382,6 +382,46 @@ header.sticky {
     margin: 15px 25px;
     transition: all 0.5s ease;
   }
+  .headings h5 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: coral;
+  }
+  .headings h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 3px;
+  }
+  .headings p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 13px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    background-color: coral;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  .btn:hover {
+    transform: translateX(10px);
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+  }
 }
 @media (max-width: 1359px) {
   header {
@@ -608,6 +648,7 @@ header.sticky {
     bottom: 0;
     left: 100%;
     right: 0;
+    margin-top: -10px;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -623,5 +664,13 @@ header.sticky {
   }
   .navigation.open {
     left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .olympics {
+    grid-template-columns: 1fr;
+  }
+  .events-calendar {
+    grid-template-columns: 1fr;
   }
 }

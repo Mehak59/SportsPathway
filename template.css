@@ -22,7 +22,7 @@ header {
 .header .logo img {
   height: 130px;
   width: auto;
-  }
+}
 
 header.sticky {
   background: transparent;
@@ -104,7 +104,7 @@ section {
 }
 .headings p {
   font-size: 17px;
-  font-weight:500;
+  font-weight: 500;
   line-height: 30px;
   color: rgb(249, 252, 252);
   background-color: rgba(16, 15, 15, 0.4);
@@ -135,6 +135,38 @@ section {
   letter-spacing: 25px;
 }
 .content-text p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 30px;
+  color: lightgray;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.content2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9rem;
+  position: relative;
+  padding: 50px 120px 10px 120px;
+}
+.content-image2 {
+  border-radius: 10px;
+}
+.content-text2 h5 {
+  font-size: 22px;
+  font-weight: 600;
+  color: coral;
+  letter-spacing: 6px;
+}
+.content-text2 h1 {
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 25px;
+}
+.content-text2 p {
   font-size: 17px;
   font-weight: 500;
   line-height: 30px;
