@@ -43,7 +43,7 @@ header {
   color: coral;
 }
 .navigation.open {
-  transform: translateX(0); /* This will show the navigation when open */
+  transform: translateX(0);
 }
 .navtabs {
   display: flex;
@@ -404,25 +404,6 @@ header.sticky {
     text-align: justify;
     margin-bottom: 20px;
   }
-  .btn {
-    display: inline-block;
-    padding: 13px 40px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    color: black;
-    background-color: coral;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: all 0.5s ease;
-    cursor: pointer;
-  }
-  .btn:hover {
-    transform: translateX(10px);
-    border: 2px solid white;
-    background: transparent;
-    color: white;
-  }
 }
 @media (max-width: 1359px) {
   header {
@@ -480,23 +461,7 @@ header.sticky {
     margin: 15px 10px;
     transition: all 0.5s ease;
   }
-  .events-calendar {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 5rem;
-    position: relative;
-    padding: 50px 120px 10px 120px;
-  }
-  .olympics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 4rem;
-    position: relative;
-    padding: 50px 120px 10px 120px;
-  }
+
   .footer {
     margin-top: 40px;
     background-color: rgb(26, 25, 25);
@@ -506,120 +471,12 @@ header.sticky {
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 2rem;
   }
-  .category-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
 }
 @media (max-width: 1056px) {
   section {
     padding: 100px 8% 35px;
   }
-  .category-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-  .olympics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 1.5rem;
-    position: relative;
-    padding: 50px 80px 10px 90px;
-  }
-  .olympic-image {
-    border-radius: 10px;
-    margin-left: -60px;
-  }
-  .olympic-text h5 {
-    font-size: 15px;
-    font-weight: 600;
-    color: coral;
-    letter-spacing: 6px;
-  }
-  .olympic-text h1 {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 10px;
-  }
-  .olympic-text p {
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 30px;
-    color: lightgray;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    margin-bottom: 20px;
-  }
 
-  .popular-sports {
-    position: relative;
-    padding: 20px 120px 10px 120px;
-  }
-  .text {
-    text-align: center;
-  }
-  .text h2 {
-    font-size: 30px;
-    font-weight: 800;
-  }
-  .sport-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
-    gap: 3rem;
-    margin-top: 20px;
-  }
-  .card {
-    position: relative;
-  }
-
-  .card h6 {
-    position: absolute;
-    left: 25px;
-    bottom: 40px;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  .card p {
-    position: absolute;
-    left: 25px;
-    bottom: 10px;
-    font-size: 9px;
-    font-weight: 700;
-  }
-
-  .events-calendar {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 2rem;
-    position: relative;
-    padding: 50px 30px 10px 80px;
-  }
-  .calendar-text h2 {
-    color: coral;
-    letter-spacing: 6px;
-    font-size: 20px;
-    font-weight: 400;
-  }
-  .calendar-text p {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 30px;
-    color: lightgray;
-    background-color: rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    margin-bottom: 20px;
-  }
   .footer {
     margin-top: 40px;
     background-color: rgb(26, 25, 25);
@@ -630,13 +487,6 @@ header.sticky {
     gap: 0.1rem;
   }
 
-  .sport-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-    align-items: center;
-    gap: 1rem;
-    margin-top: 3rem;
-  }
   #menu {
     display: block;
   }
@@ -685,33 +535,7 @@ header.sticky {
     font-size: 16px;
     line-height: 25px;
   }
-  .btn {
-    padding: 10px 30px;
-    font-size: 14px;
-  }
-  .categories {
-    padding: 20px;
-  }
-  .category-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .olympics {
-    grid-template-columns: 1fr;
-    gap: 5rem;
-  }
-  .olympic-image {
-    text-align: center;
-  }
-  .events-calendar {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .calendar {
-    text-align: center;
-  }
-  #calendar {
-    width: 100%;
-  }
+
   .footer {
     padding: 30px;
   }
@@ -733,22 +557,7 @@ header.sticky {
     font-size: 15px;
     line-height: 22px;
   }
-  .btn {
-    padding: 8px 25px;
-    font-size: 13px;
-  }
-  .category-content {
-    grid-template-columns: 1fr;
-  }
-  .olympics {
-    gap: 4rem;
-  }
-  .olympic-text h1 {
-    font-size: 35px;
-  }
-  .events-calendar {
-    padding: 20px;
-  }
+
   .footer {
     padding: 20px;
     grid-template-columns: 1fr;
