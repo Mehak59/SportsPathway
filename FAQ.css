@@ -1,0 +1,401 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    margin: 0;
+  }
+  
+  header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+  }
+  
+  .logo {
+    margin-left: 80px;
+  }
+  
+  .navigation {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+  }
+  
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all 0.5s ease;
+  }
+  
+  .navigation a:hover {
+    color: coral;
+  }
+  
+  .navtabs {
+    display: flex;
+    margin-right: 95px;
+  }
+  
+  .navtabs a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0 10px;
+    transition: all 0.5s ease;
+  }
+  
+  .navtabs a:hover {
+    color: coral;
+    transform: translateY(-3px);
+  }
+  #menu {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* section {
+    position: fixed;
+  } */
+  
+  .home {
+    padding: 20px 650px 10px 120px;
+    position: relative;
+    background-image: url(https://wallpapers.com/images/hd/glowing-contact-us-logo-qx58564q7a51etk6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .headings h5 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: coral;
+  }
+  .headings h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 3px;
+  }
+  .headings p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  header.sticky {
+    background: transparent;
+    backdrop-filter: blur(35px);
+  }
+  .categories {
+    position: relative;
+    padding: 20px 120px 10px 120px;
+  }
+  .category-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .image {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s;
+  }
+  .image img:hover {
+    transform: scale(1.2);
+  }
+  .category-content h4 {
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .category-content h4:hover {
+    color: coral;
+  }
+  .olympics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 9rem;
+    position: relative;
+    padding: 50px 120px 10px 120px;
+  }
+  .olympic-image {
+    border-radius: 10px;
+  }
+  .olympic-text h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: coral;
+    letter-spacing: 6px;
+  }
+  .olympic-text h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 25px;
+  }
+  .olympic-text p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  .popular-sports {
+    position: relative;
+    padding: 20px 120px 10px 120px;
+  }
+  .text {
+    text-align: center;
+  }
+  .text h2 {
+    font-size: 37px;
+    font-weight: 800;
+  }
+  .sport-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .card {
+    position: relative;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(70%);
+    transition: all 0.3s cubic-bezier(0.499, 0.05, 0.55, 0.95);
+    will-change: filter;
+    display: block;
+  }
+  .card h6 {
+    position: absolute;
+    left: 25px;
+    bottom: 145px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .card p {
+    position: absolute;
+    left: 25px;
+    bottom: 45px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .card img:hover {
+    filter: brightness(90%) hue-rotate(50deg);
+    border: 3px white solid;
+    transform: scale(1.04);
+    cursor: pointer;
+  }
+  .center-btn {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .events-calendar {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20rem;
+    position: relative;
+  
+    padding: 50px 120px 10px 120px;
+  }
+  
+  .calendar-text h2 {
+    color: coral;
+    letter-spacing: 6px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .calendar-text p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  #calendar {
+    width: 450px; /* Set a small width for the calendar */
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fc-toolbar-title {
+    color: black;
+    font-size: 1rem; /* Adjust toolbar title size */
+  }
+  
+  .fc-header-toolbar {
+    font-size: 0.75rem; /* Smaller toolbar font size */
+  }
+  
+  .fc-daygrid-day-number {
+    color: black;
+    font-size: 0.8rem; /* Adjust day number size */
+  }
+  
+  .fc-event {
+    font-size: 0.7rem; /* Event title size */
+  }
+  
+  .fc .fc-daygrid-day-top {
+    padding: 2px; /* Adjust padding for better visibility */
+  }
+  
+  .fc .fc-scrollgrid {
+    font-size: 0.8rem; /* Overall calendar font size */
+  }
+  .footer {
+    margin-top: 40px;
+    background-color: rgb(26, 25, 25);
+    position: relative;
+    padding: 50px 0 10px 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 9rem;
+  }
+  .footer-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .footer-box a {
+    color: lightgray;
+    margin-bottom: 0.8rem;
+    text-decoration: none;
+    transition: all 0.5s ease;
+  }
+  .footer-box a:hover {
+    transform: translateX(-5px);
+    color: coral;
+  }
+  .social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background-color: rgb(83, 80, 80);
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: transform 0.6s;
+  }
+  .social a:hover {
+    background: coral;
+    color: black;
+    transform: translateX(-4px);
+  }
+  @media (max-width: 1700px) {
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:black;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.para{
+    color: white;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    cursor: pointer;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '\25BC'; /* Unicode for downward arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
+.faq-answer {
+    display: none;
+    color: white;
+}
