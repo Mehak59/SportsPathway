@@ -667,10 +667,89 @@ header.sticky {
   }
 }
 @media (max-width: 800px) {
+  header {
+    padding: 18px 5px;
+  }
+  section {
+    padding: 50px 5% 40px;
+  }
+  .home {
+    background-position: center center;
+    height: 80vh;
+  }
+  .headings h1 {
+    font-size: 35px;
+  }
+  .headings p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .btn {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+  .categories {
+    padding: 20px;
+  }
+  .category-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .olympics {
     grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  .olympic-image {
+    text-align: center;
   }
   .events-calendar {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .calendar {
+    text-align: center;
+  }
+  #calendar {
+    width: 100%;
+  }
+  .footer {
+    padding: 30px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 15px 5px;
+  }
+  section {
+    padding: 40px 5%;
+  }
+  .home {
+    height: 70vh;
+  }
+  .headings h1 {
+    font-size: 30px;
+  }
+  .headings p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .btn {
+    padding: 8px 25px;
+    font-size: 13px;
+  }
+  .category-content {
+    grid-template-columns: 1fr;
+  }
+  .olympics {
+    gap: 4rem;
+  }
+  .olympic-text h1 {
+    font-size: 35px;
+  }
+  .events-calendar {
+    padding: 20px;
+  }
+  .footer {
+    padding: 20px;
     grid-template-columns: 1fr;
   }
 }
