@@ -272,3 +272,111 @@
     background: transparent;
     color: white;
   }
+
+  /* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .container,
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5 {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    margin: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 450px; /* Limit max width */
+    margin-bottom: 20px; /* Space between cards */
+  }
+
+  header {
+    padding: 10px; /* Reduce padding */
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  header {
+    flex-direction: column; /* Stack header items vertically */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .navigation {
+    display: none; /* Hide navigation by default */
+    flex-direction: column; /* Stack navigation items */
+    align-items: center; /* Center align items */
+    width: 100%; /* Full width */
+    position: absolute; /* Position below header */
+    top: 60px; /* Adjust position */
+    background-color: rgba(0, 0, 0, 0.8); /* Background color */
+    z-index: 1000; /* Layer above content */
+  }
+
+  .navigation.active {
+    display: flex; /* Show navigation when active */
+  }
+
+  #menu {
+    display: block; /* Show the hamburger icon */
+    margin-right: 20px; /* Add margin for spacing */
+  }
+
+  .navtabs {
+    justify-content: center; /* Center align social links */
+    margin-top: 10px; /* Space above social links */
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 20px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .headings h1 {
+    font-size: 36px; /* Adjust heading size */
+  }
+
+  .headings p {
+    font-size: 15px; /* Adjust paragraph size */
+  }
+
+  .footer {
+    padding: 20px 0; /* Adjust footer padding */
+    flex-direction: column; /* Stack footer items */
+    align-items: center; /* Center align footer items */
+  }
+
+  .footer-box {
+    flex: 1 1 100%; /* Stack footer boxes */
+    margin-bottom: 20px; /* Space between boxes */
+    text-align: center; /* Center align text */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px; /* Further reduce padding */
+    align-items: center; /* Center items vertically */
+  }
+
+  .navigation {
+    display: none; /* Keep navigation hidden */
+    position: absolute; /* Positioning for mobile */
+  }
+
+  .social a {
+    height: 35px; /* Adjust social icon size */
+    width: 35px;
+    font-size: 16px; /* Adjust font size */
+    margin-right: 5px; /* Smaller margin between icons */
+  }
+
+  .footer {
+    padding: 10px 0; /* Reduce footer padding */
+  }
+}
+
