@@ -9,6 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
       "hockey",
       "skating",
       "wrestling",
+      "archery",
+      "hammer throw",
+      "taekwondo",
+      
+      "golf",
+      "shooting",
+      "swimming",
+      "discus throw",
+      "boxing",
+      "javelin throw"
     ];
     const randomSearchTerm =
       searchTerms[Math.floor(Math.random() * searchTerms.length)];

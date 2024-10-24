@@ -40,3 +40,43 @@ menu.onclick = () => {
   menu.classList.toggle('bx-x');
   navbar.classList.toggle('open');
 };
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth' 
+  });
+}
+
+window.onscroll = function () {
+  const button = document.getElementById('scrollToTopBtn');
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      button.classList.add('show');
+  } else {
+      button.classList.remove('show');
+  }
+};
+function getGreeting() {
+  const hour = new Date().getHours(); 
+  let greeting;
+
+  if (hour < 12) {
+    greeting = "Good morning! Welcome to SportsPathway!";
+  } else if (hour < 18) {
+    greeting = "Good afternoon! Welcome to SportsPathway!";
+  } else {
+    greeting = "Good evening! Welcome to SportsPathway!";
+  }
+
+  return greeting;
+}
+function showGreetingPopup() {
+  const popup = document.getElementById('greetingPopup');
+  const message = document.getElementById('greetingMessage');
+  
+  message.innerText = getGreeting(); 
+  popup.style.display = 'block'; 
+  setTimeout(() => {
+    popup.style.display = 'none'; 
+  }, 5000); 
+}
+window.onload = showGreetingPopup;
