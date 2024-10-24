@@ -1,4 +1,4 @@
-// Load saved progress on page load
+
 window.onload = function() {
     for (let i = 1; i <= 20; i++) {
         const savedResponse = localStorage.getItem(`q${i}`);
@@ -20,7 +20,6 @@ function showNext(current) {
         const radios = currentContainer.querySelectorAll('input[type="radio"]');
         const answered = Array.from(radios).some(radio => radio.checked);
         if (answered) {
-            // Save current question response to local storage
             const selected = Array.from(radios).find(radio => radio.checked);
             localStorage.setItem(`q${current}`, selected.value);
 
@@ -38,8 +37,6 @@ function showPrev(current) {
     if (prevContainer) {
         currentContainer.classList.remove('active');
         prevContainer.classList.add('active');
-
-        // Restore previous question response from local storage
         const savedResponse = localStorage.getItem(`q${current - 1}`);
         if (savedResponse) {
             const radios = prevContainer.querySelectorAll('input[type="radio"]');
@@ -55,7 +52,6 @@ function showPrev(current) {
 function submitQuiz() {
     let responses = {};
     for (let i = 1; i <= 20; i++) {
-        // Get responses from local storage if available
         const response = localStorage.getItem(`q${i}`);
         responses[`q${i}`] = response ? response : null; 
     }

@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-  margin-left: 80px;
+  margin-left: 50px;
 }
 
 .navigation {
@@ -35,24 +35,26 @@ header {
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  margin: 15px 22px;
+  margin: 15px 15px;
   transition: all 0.5s ease;
 }
 
 .navigation a:hover {
   color: coral;
 }
-
+.navigation.open {
+  transform: translateX(0); /* This will show the navigation when open */
+}
 .navtabs {
   display: flex;
-  margin-right: 95px;
+  margin-right: 50px;
 }
 
 .navtabs a {
   color: white;
   text-decoration: none;
   font-size: 15px;
-  margin: 0 10px;
+  margin: 0 5px;
   transition: all 0.5s ease;
 }
 
@@ -66,172 +68,475 @@ header {
   font-size: 25px;
   cursor: pointer;
   display: none;
+  position: relative;
 }
 
 section {
-  position: fixed;
+  padding: 20px 650px 10px 120px;
 }
 
 .home {
-  padding: 20px 650px 10px 120px;
   position: relative;
   background-image: url(https://img.freepik.com/free-photo/sports-stadium-with-lights-photography_1409-4809.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: bottom center;
   display: flex;
   width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: flex-start;
 }
-.container {
-  position: absolute;
-  width: 70%;
-  height: 550px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  margin-left: 120px;
-  border-radius: 15px;
-}
-.container .content {
-  position: absolute;
-  left: 0;
-  width: 63%;
-  height: 100%;
-  background: transparent;
-  color: black;
-}
-.content h2 {
-  font-size: 40px;
-  font-weight: 500;
-  padding-top: 150px;
-  padding-left: 60px;
-  line-height: 1;
-  color: coral;
-  letter-spacing: 4px;
-}
-.content h2 span {
-  font-size: 25px;
-  color: white;
-}
-.container p {
-  font-size: 20px;
-  padding-left: 60px;
-  color: lightgray;
-}
-.container .loginbox {
-  position: absolute;
-  right: 0;
-  width: 37%;
-  height: 100%;
-  overflow: hidden;
-}
-.loginbox .form-box.login {
-  transform: translateX(0);
-  transition: transform 0.6s ease;
-  transition-delay: 0.7s;
-}
-.loginbox.active .form-box.login {
-  transform: translateX(430px);
-  transition-delay: 0s;
-}
-.loginbox .form-box.register {
-  transform: translateX(430px);
-  transition: transform 0.6s ease;
-  transition-delay: 0s;
-}
-.loginbox.active .form-box.register {
-  transform: translateX(0);
-  transition-delay: 0.7s;
-}
-.loginbox .form-box {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(5px);
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.loginbox .form-box.register {
-  transform: translate(430px);
-}
-.form-box h2 {
-  font-size: 32px;
-  text-align: center;
-  color: coral;
-}
-.form-box .input {
+
+.footer {
+  margin-top: 40px;
+  background-color: rgb(26, 25, 25);
   position: relative;
-  width: 340px;
-  height: 50px;
-  border-bottom: 2px solid black;
-  margin: 30px 0;
+  padding: 50px 0 10px 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 9rem;
 }
-.input input {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-.input label {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-weight: 500;
-  pointer-events: none;
-  transition: 0.5s ease;
-}
-.input input:focus ~ label,
-.input input:valid ~ label {
-  top: -5px;
-}
-.input .icon {
-  position: absolute;
-  right: 0;
-  top: 13px;
-  font-size: 19px;
-}
-.form-box .rememberandforget {
-  font-size: 15.5px;
-  font-weight: 500;
-  margin: -15px 0 15px;
+.footer-box {
   display: flex;
+  flex-direction: column;
+}
+.footer-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.footer-box a {
+  color: lightgray;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.footer-box a:hover {
+  transform: translateX(-5px);
+  color: coral;
+}
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  background-color: rgb(83, 80, 80);
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  transition: transform 0.6s;
+}
+.social a:hover {
+  background: coral;
+  color: black;
+  transform: translateX(-4px);
+}
+.box {
+  width: 380px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.header {
+  width: 300px;
+  height: 50px;
+  text-transform: uppercase;
+  display: inline-flex;
+  padding-top: 20px;
+  padding-bottom: 0;
   justify-content: space-between;
 }
-.rememberandforget a {
+
+.header a {
+  font-size: 20px;
   text-decoration: none;
-  color: lightgray;
-}
-.rememberandforget label input {
-  margin-right: 3px;
-}
-.rememberandforget a:hover {
-  text-decoration: underline;
-}
-.subbutton {
-  width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
+  color: #ffffff;
+  display: inline-flex;
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: center;
   cursor: pointer;
+}
+
+.header .active {
+  color: #df80ff;
+  font-weight: bold;
+  position: relative;
+}
+
+.header .active:after {
+  position: absolute;
+  border: none;
+  content: "";
+}
+
+#errorMsg {
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+.content {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+form {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  flex-direction: column;
+  transition: right 0.5s;
+}
+
+.login a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.extend form {
+  right: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display: block;
+  position: relative;
+  border: 4px solid #ffffff;
+  padding: 12px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 17px;
+  outline: none;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+  border: 4px solid #df80ff;
+}
+
+input[type="submit"] {
+  display: block;
+  position: relative;
+  border: 3px solid #df80ff;
+  padding: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #600080;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+input[type="checkbox"] {
+  background-color: #df80ff;
+}
+#check {
+  margin-top: 10px;
+  text-align: left;
+  color: #ffffff;
   font-size: 15px;
 }
-.form-box .loginandregister {
-  font-size: 13px;
+@media (max-width: 1700px) {
+  header {
+    padding: 18px 5px;
+  }
+  header.sticky {
+    padding: 7px 5px;
+  }
+  section {
+    padding: 50px 8% 40px;
+  }
+  .navigation {
+    display: flex;
+    list-style: none;
+    margin-right: 45px;
+  }
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 25px;
+    transition: all 0.5s ease;
+  }
+  .headings h5 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: coral;
+  }
+  .headings h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 3px;
+  }
+  .headings p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 30px;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    margin-bottom: 20px;
+  }
 }
-.form-box .loginandregister a {
-  text-decoration: none;
-  color: coral;
+@media (max-width: 1359px) {
+  header {
+    padding: 18px 5px;
+  }
+  header.sticky {
+    padding: 7px 5px;
+  }
+  section {
+    padding: 50px 8% 40px;
+  }
+  .navigation {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+  }
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 20px;
+    transition: all 0.5s ease;
+  }
+  .footer {
+    margin-top: 40px;
+    background-color: rgb(26, 25, 25);
+    position: relative;
+    padding: 50px 0 10px 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 4rem;
+  }
 }
-.form-box .loginandregister a:hover {
-  text-decoration: underline;
+@media (max-width: 1200px) {
+  header {
+    padding: 14px 2px;
+  }
+  header.sticky {
+    padding: 7px 2px;
+  }
+  section {
+    padding: 50px 8% 35px;
+  }
+  .navigation {
+    display: flex;
+    list-style: none;
+    margin-right: 25px;
+  }
+  .navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 10px;
+    transition: all 0.5s ease;
+  }
+
+  .footer {
+    margin-top: 40px;
+    background-color: rgb(26, 25, 25);
+    position: relative;
+    padding: 50px 0 10px 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+  }
+}
+@media (max-width: 1056px) {
+  section {
+    padding: 100px 8% 35px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    background-color: rgb(26, 25, 25);
+    position: relative;
+    padding: 50px 0 10px 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    gap: 0.1rem;
+  }
+
+  #menu {
+    display: block;
+  }
+  .navigation {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 40px 60px;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    transition: all 0.5s ease;
+  }
+  .navigation a {
+    display: block;
+    color: lightgray;
+    padding: 0;
+    margin: 0px 0px 40px 0px;
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  .navigation.open {
+    left: 0;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    padding: 18px 5px;
+  }
+  section {
+    padding: 50px 5% 40px;
+  }
+  .home {
+    background-position: center center;
+    height: 80vh;
+  }
+  .headings h1 {
+    font-size: 35px;
+  }
+  .headings p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .footer {
+    padding: 30px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 15px 5px;
+  }
+  section {
+    padding: 40px 5%;
+  }
+  .home {
+    height: 70vh;
+  }
+  .headings h1 {
+    font-size: 30px;
+  }
+  .headings p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .footer {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 507px) {
+  header {
+    padding: 15px 10px;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .navigation {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    padding: 40px 60px;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    transition: all 0.5s ease;
+  }
+  .navigation a {
+    display: block;
+    color: lightgray;
+    padding: 0;
+    margin: 0px 0px 40px 0px;
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  .navigation.open {
+    left: 0;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  .headings h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .headings h5 {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .headings p {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+
+  .footer {
+    padding: 30px 10px;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-box h3 {
+    font-size: 18px;
+  }
+
+  .footer-box a {
+    font-size: 14px;
+  }
+
+  .social a {
+    height: 35px;
+    width: 35px;
+    font-size: 18px;
+  }
 }

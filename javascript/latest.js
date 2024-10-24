@@ -1,4 +1,14 @@
+const header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+  localStorage.setItem("scrollPosition", window.scrollY);
+  header.classList.toggle("sticky", window.scrollY > 60);
+});
 document.addEventListener("DOMContentLoaded", function () {
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
+
+  if (savedScrollPosition) {
+    window.scrollTo(0, parseInt(savedScrollPosition, 10));
+  }
   const apiKey = "02b5eb252808641b434b28b2f63b9fbf";
   const searchTerms = [
     "football", "basketball", "badminton", "tennis", "table tennis", "hockey",
@@ -120,3 +130,23 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.remove("sticky");
     }
 });
+let menu = document.querySelector('#menu');
+let navbar = document.querySelector('.navigation');
+menu.onclick = () => {
+  menu.classList.toggle('bx-x');
+  navbar.classList.toggle('open');
+};
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth' 
+  });
+}
+window.onscroll = function () {
+    const button = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.classList.add('show');
+    } else {
+        button.classList.remove('show');
+    }
+  };
