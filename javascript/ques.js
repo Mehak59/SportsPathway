@@ -1,3 +1,18 @@
+// Load saved progress on page load
+window.onload = function() {
+    for (let i = 1; i <= 20; i++) {
+        const savedResponse = localStorage.getItem(`q${i}`);
+        if (savedResponse) {
+            const radios = document.querySelectorAll(`input[name="q${i}"]`);
+            radios.forEach(radio => {
+                if (radio.value === savedResponse) {
+                    radio.checked = true;
+                }
+            });
+        }
+    }
+};
+
 function showNext(current) {
     const currentContainer = document.getElementById(`question${current}`);
     const nextContainer = document.getElementById(`question${current + 1}`);
@@ -5,6 +20,10 @@ function showNext(current) {
         const radios = currentContainer.querySelectorAll('input[type="radio"]');
         const answered = Array.from(radios).some(radio => radio.checked);
         if (answered) {
+            // Save current question response to local storage
+            const selected = Array.from(radios).find(radio => radio.checked);
+            localStorage.setItem(`q${current}`, selected.value);
+
             currentContainer.classList.remove('active');
             nextContainer.classList.add('active');
         } else {
@@ -19,19 +38,28 @@ function showPrev(current) {
     if (prevContainer) {
         currentContainer.classList.remove('active');
         prevContainer.classList.add('active');
+
+        // Restore previous question response from local storage
+        const savedResponse = localStorage.getItem(`q${current - 1}`);
+        if (savedResponse) {
+            const radios = prevContainer.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                if (radio.value === savedResponse) {
+                    radio.checked = true;
+                }
+            });
+        }
     }
 }
 
 function submitQuiz() {
     let responses = {};
     for (let i = 1; i <= 20; i++) {
-        const selected = document.querySelector(`input[name="q${i}"]:checked`);
-        if (selected) {
-            responses[`q${i}`] = selected.value;
-        } else {
-            responses[`q${i}`] = null; 
-        }
+        // Get responses from local storage if available
+        const response = localStorage.getItem(`q${i}`);
+        responses[`q${i}`] = response ? response : null; 
     }
+
     console.log(responses); 
     let recommendedSport = "";
     if (responses.q1 === 'Love' && responses.q2 === 'Very high' && responses.q16 === 'Love it') {
@@ -78,4 +106,5 @@ function submitQuiz() {
     } else {
         alert(recommendedSport);
     }
+    localStorage.clear();
 }
