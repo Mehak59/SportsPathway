@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchTerms = [
     "football", "basketball", "badminton", "tennis", "table tennis", "hockey",
     "skating", "wrestling", "archery", "hammer throw", "taekwondo", "golf", 
-    "shooting", "swimming", "discus throw", "boxing", "javelin throw"
+    "shooting-sport", "swimming", "discus throw", "boxing", "javelin throw"
   ];
 
   const randomSearchTerm = searchTerms[Math.floor(Math.random() * searchTerms.length)];
