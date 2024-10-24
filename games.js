@@ -6,10 +6,3 @@ window.addEventListener("scroll", function() {
         header.classList.remove("sticky");
     }
 });
-let menu=document.querySelector('#menu');
-let navbar=document.querySelector('.navigation');
-menu.onclick=()=>{
-  menu.classList.toggle('bx-x');
-  navbar.classList.toggle('open');
-};
-
