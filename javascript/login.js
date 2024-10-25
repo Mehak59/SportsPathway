@@ -19,6 +19,7 @@ function validateLoginForm() {
 
     return true; 
 }
+}
 
 function validateSignupForm() {
     const email = document.getElementById('signEmail').value.trim();
@@ -57,4 +58,3 @@ document.getElementById('signup').addEventListener('click', function() {
     document.querySelector('.login').style.display = 'none';
     document.querySelector('.signup').style.display = 'flex';
 });
-}
