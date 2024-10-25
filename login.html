@@ -108,33 +108,39 @@
         </div>
       </div>
     </section>
+    <section class="footer">
+      <div class="footer-box">
+        <h3>Services</h3>
+        <a href="questionnaire.html">Questionnaire</a>
+        <a href="latest.html">Latest</a>
+      </div>
+      <div class="footer-box">
+        <h3>About</h3>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-box">
+        <h3>Help</h3>
+        <a href="FAQ.html">FAQs</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      <div class="footer-box">
+        <h3>Social</h3>
+        <div class="social">
+          <a href="https://www.instagram.com/"
+            ><i class="ri-instagram-fill"></i
+          ></a>
+          <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
+          <a href="https://www.facebook.com/"
+            ><i class="ri-facebook-fill"></i
+          ></a>
+        </div>
+      </div>
+    </section>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
     <script src="javascript/login.js"></script>
-    <script>
-        function validateLoginForm() {
-            return true; 
-        }
-
-        function validateRegisterForm() {
-            const emailInput = document.querySelector('.register .input input[type="email"]');
-            const passwordInput = document.querySelector('.register .input input[type="password"]');
-            const emailValid = emailInput.checkValidity();
-            const passwordValid = passwordInput.value.length >= 6;
-
-            if (!emailValid) {
-                alert("Please enter a valid email address.");
-                return false; 
-            }
-            if (!passwordValid) {
-                alert("Password must be at least 6 characters long.");
-                return false; 
-            }
-            return true; // Allow the form to submit
-        }
-    </script>
-</body>
+  </body>
 </html>

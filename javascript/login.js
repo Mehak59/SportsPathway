@@ -58,3 +58,9 @@ document.getElementById('signup').addEventListener('click', function() {
     document.querySelector('.login').style.display = 'none';
     document.querySelector('.signup').style.display = 'flex';
 });
+let menu = document.querySelector('#menu');
+let navbar = document.querySelector('.navigation');
+menu.onclick = () => {
+  menu.classList.toggle('bx-x');
+  navbar.classList.toggle('open');
+};
