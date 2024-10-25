@@ -1,50 +1,68 @@
-$(window).on("hashchange", function () {
-	if (location.hash.slice(1) == "signup") {
-		$(".page").addClass("extend");
-		$("#login").removeClass("active");
-		$("#signup").addClass("active");
-	} else {
-		$(".page").removeClass("extend");
-		$("#login").addClass("active");
-		$("#signup").removeClass("active");
-	}
-});
-$(window).trigger("hashchange");
-
 function validateLoginForm() {
-	var name = document.getElementById("logName").value;
-	var password = document.getElementById("logPassword").value;
+    const username = document.getElementById('logName').value.trim();
+    const password = document.getElementById('logPassword').value.trim();
+    const errorMsg = document.getElementById('errorMsg');
+    errorMsg.innerHTML = '';
 
-	if (name == "" || password == "") {
-		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
-		return false;
-	}
+    if (username === '') {
+        errorMsg.innerHTML += 'Username is required.<br />';
+        return false;
+    }
 
-	else if (password.length < 8) {
-		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
-		return false;
-	}
-	else {
-		alert("Successfully logged in");
-		return true;
-	}
+    if (password === '') {
+        errorMsg.innerHTML += 'Password is required.<br />';
+        return false;
+    }
+
+    // Check if password length is greater than 8 characters
+    if (password.length <= 8) {
+        errorMsg.innerHTML += 'Password must be more than 8 characters.<br />';
+        return false;
+    }
+
+    // Here, you can also add additional validation checks as necessary (e.g., pattern match)
+
+    return true; 
 }
+
 function validateSignupForm() {
-	var mail = document.getElementById("signEmail").value;
-	var name = document.getElementById("signName").value;
-	var password = document.getElementById("signPassword").value;
+    const email = document.getElementById('signEmail').value.trim();
+    const username = document.getElementById('signName').value.trim();
+    const password = document.getElementById('signPassword').value.trim();
+    const errorMsg = document.getElementById('errorMsg');
 
-	if (mail == "" || name == "" || password == "") {
-		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
-		return false;
-	}
+    errorMsg.innerHTML = '';
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
-	else if (password.length < 8) {
-		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
-		return false;
-	}
-	else {
-		alert("Successfully signed up");
-		return true;
-	}
+    if (email === '' || !emailPattern.test(email)) {
+        errorMsg.innerHTML += 'Valid email is required.<br />';
+        return false;
+    }
+
+    if (username === '') {
+        errorMsg.innerHTML += 'Username is required.<br />';
+        return false;
+    }
+
+    if (password === '' || password.length <= 8) {
+        errorMsg.innerHTML += 'Password must be more than 8 characters.<br />';
+        return false;
+    }
+
+    // Save username and email in local storage
+    localStorage.setItem('username', username);
+    localStorage.setItem('email', email);
+
+    return true; 
 }
+
+// Event listeners for toggling between login and signup forms
+document.getElementById('login').addEventListener('click', function() {
+    document.querySelector('.login').style.display = 'flex';
+    document.querySelector('.signup').style.display = 'none';
+});
+
+document.getElementById('signup').addEventListener('click', function() {
+    document.querySelector('.login').style.display = 'none';
+    document.querySelector('.signup').style.display = 'flex';
+});
