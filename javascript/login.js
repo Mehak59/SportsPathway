@@ -12,15 +12,10 @@ function validateLoginForm() {
     if (password === '') {
         errorMsg.innerHTML += 'Password is required.<br />';
         return false;
-    }
-
-    // Check if password length is greater than 8 characters
     if (password.length <= 8) {
         errorMsg.innerHTML += 'Password must be more than 8 characters.<br />';
         return false;
     }
-
-    // Here, you can also add additional validation checks as necessary (e.g., pattern match)
 
     return true; 
 }
@@ -48,15 +43,11 @@ function validateSignupForm() {
         errorMsg.innerHTML += 'Password must be more than 8 characters.<br />';
         return false;
     }
-
-    // Save username and email in local storage
     localStorage.setItem('username', username);
     localStorage.setItem('email', email);
 
     return true; 
 }
-
-// Event listeners for toggling between login and signup forms
 document.getElementById('login').addEventListener('click', function() {
     document.querySelector('.login').style.display = 'flex';
     document.querySelector('.signup').style.display = 'none';
