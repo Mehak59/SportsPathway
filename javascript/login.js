@@ -57,3 +57,4 @@ document.getElementById('signup').addEventListener('click', function() {
     document.querySelector('.login').style.display = 'none';
     document.querySelector('.signup').style.display = 'flex';
 });
+}
