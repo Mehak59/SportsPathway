@@ -120,8 +120,7 @@
     <script src="javascript/login.js"></script>
     <script>
         function validateLoginForm() {
-            // Add any additional login validation logic here if necessary
-            return true; // Allow the form to submit
+            return true; 
         }
 
         function validateRegisterForm() {
@@ -132,11 +131,11 @@
 
             if (!emailValid) {
                 alert("Please enter a valid email address.");
-                return false; // Prevent form submission
+                return false; 
             }
             if (!passwordValid) {
                 alert("Password must be at least 6 characters long.");
-                return false; // Prevent form submission
+                return false; 
             }
             return true; // Allow the form to submit
         }
