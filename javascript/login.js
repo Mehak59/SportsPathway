@@ -1,62 +1,50 @@
-const loginBox=document.querySelector('.loginbox')
-const loginLink=document.querySelector('.login-link')
-const registerLink=document.querySelector('.register-link')
-registerLink.addEventListener('click',() =>{
-    loginBox.classList.add('active');
+$(window).on("hashchange", function () {
+	if (location.hash.slice(1) == "signup") {
+		$(".page").addClass("extend");
+		$("#login").removeClass("active");
+		$("#signup").addClass("active");
+	} else {
+		$(".page").removeClass("extend");
+		$("#login").addClass("active");
+		$("#signup").removeClass("active");
+	}
 });
-loginLink.addEventListener('click',() =>{
-    loginBox.classList.remove('active');
-});
+$(window).trigger("hashchange");
+
 function validateLoginForm() {
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
-    let isValid = true;
-    document.getElementById('login-username-error').textContent = '';
-    document.getElementById('login-password-error').textContent = '';
+	var name = document.getElementById("logName").value;
+	var password = document.getElementById("logPassword").value;
 
-    if (username === '') {
-      document.getElementById('login-username-error').textContent = 'Username is required';
-      isValid = false;
-    }
+	if (name == "" || password == "") {
+		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+		return false;
+	}
 
-    if (password === '') {
-      document.getElementById('login-password-error').textContent = 'Password is required';
-      isValid = false;
-    }
+	else if (password.length < 8) {
+		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+		return false;
+	}
+	else {
+		alert("Successfully logged in");
+		return true;
+	}
+}
+function validateSignupForm() {
+	var mail = document.getElementById("signEmail").value;
+	var name = document.getElementById("signName").value;
+	var password = document.getElementById("signPassword").value;
 
-    return isValid;
-  }
-  function validateRegisterForm() {
-    const email = document.getElementById('register-email').value;
-    const username = document.getElementById('register-username').value;
-    const password = document.getElementById('register-password').value;
-    let isValid = true;
-    document.getElementById('register-email-error').textContent = '';
-    document.getElementById('register-username-error').textContent = '';
-    document.getElementById('register-password-error').textContent = '';
+	if (mail == "" || name == "" || password == "") {
+		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+		return false;
+	}
 
-    if (email === '') {
-      document.getElementById('register-email-error').textContent = 'Email is required';
-      isValid = false;
-    } else if (!validateEmail(email)) {
-      document.getElementById('register-email-error').textContent = 'Invalid email format';
-      isValid = false;
-    }
-
-    if (username === '') {
-      document.getElementById('register-username-error').textContent = 'Username is required';
-      isValid = false;
-    }
-
-    if (password === '') {
-      document.getElementById('register-password-error').textContent = 'Password is required';
-      isValid = false;
-    }
-
-    return isValid;
-  }
-
-  function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  }
+	else if (password.length < 8) {
+		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+		return false;
+	}
+	else {
+		alert("Successfully signed up");
+		return true;
+	}
+}

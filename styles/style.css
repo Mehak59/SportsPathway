@@ -811,10 +811,6 @@ header.sticky {
     display: block;
   }
 
-  section {
-    padding: 30px 20px;
-  }
-
   .headings h1 {
     font-size: 28px;
     line-height: 1.3;
@@ -837,21 +833,9 @@ header.sticky {
   }
 
   .categories,
-  .popular-sports,
   .olympics,
   .events-calendar {
     padding: 15px 20px;
-  }
-
-  .category-content,
-  .sport-content {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .image {
-    width: 80px;
-    height: 80px;
   }
 
   .olympic-text h1 {

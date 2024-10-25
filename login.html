@@ -1,122 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SportsPathway</title>
     <link rel="stylesheet" href="styles/login.css" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <a href="#" class="logo"><img src="images/logo.png" width="200px" height="110px" /></a>
-        <ul class="navigation">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="explore.html">EXPLORE</a></li>
-            <li><a href="latest.html">LATEST</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-            <li><a href="questionnaire.html">QUESTIONNAIRE</a></li>
-            <li><a href="login.html">LOGIN</a></li>
-        </ul>
-        <div class="navtabs">
-            <a href="">Follow us</a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-fill"></i></a>
-            <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
-            <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
-            <div class="bx bx-menu" id="menu"></div>
-        </div>
+      <a href="#" class="logo"
+        ><img src="images/logo.png" width="200px" height="110px"
+      /></a>
+      <ul class="navigation">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="explore.html">EXPLORE</a></li>
+        <li><a href="latest.html">LATEST</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="questionnaire.html">QUESTIONNAIRE</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+      <div class="navtabs">
+        <a href="">Follow us</a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="ri-instagram-fill"></i
+        ></a>
+        <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
+        <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
+        <div class="bx bx-menu" id="menu"></div>
+      </div>
     </header>
     <section class="home">
-        <div class="container">
-            <div class="content">
-                <div class="text">
-                    <h2>WELCOME<br /><span> To The SportsPathway </span></h2>
-                    <p>Sportspathway helps you optimize your time management for various tasks and activities, allowing you to balance training, competition, and personal commitments with ease.</p>
-                </div>
-            </div>
-            <div class="loginbox">
-                <div class="form-box login">
-                    <form action="#" onsubmit="return validateLoginForm()">
-                        <h2>SIGN IN</h2>
-                        <div class="input">
-                            <span class="icon"><i class="bx bx-user"></i></span>
-                            <input type="text" required />
-                            <label>USERNAME</label>
-                        </div>
-                        <div class="input">
-                            <span class="icon"><i class="bx bxs-lock-alt"></i></span>
-                            <input type="password" required minlength="6" />
-                            <label>PASSWORD</label>
-                        </div>
-                        <div class="rememberandforget">
-                            <label><input type="checkbox" />Remember me</label>
-                            <a href="forgot.html">Forgot password?</a>
-                        </div>
-                        <button type="submit" class="subbutton">SIGN IN</button>
-                        <div class="loginandregister">
-                            <p>Don't have an account?<a href="#" class="register-link">Sign up</a></p>
-                        </div>
-                    </form>
-                </div>
-                <div class="form-box register">
-                    <form action="#" onsubmit="return validateRegisterForm()">
-                        <h2>SIGN UP</h2>
-                        <div class="input">
-                            <span class="icon"><i class="bx bx-envelope"></i></span>
-                            <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-                            <label>EMAIL</label>
-                            <small class="error-message" style="display:none; color:red;">Please enter a valid email address.</small>
-                        </div>
-                        <div class="input">
-                            <span class="icon"><i class="bx bx-user"></i></span>
-                            <input type="text" required />
-                            <label>USERNAME</label>
-                        </div>
-                        <div class="input">
-                            <span class="icon"><i class="bx bxs-lock-alt"></i></span>
-                            <input type="password" required minlength="6" />
-                            <label>PASSWORD</label>
-                        </div>
-                        <div class="rememberandforget">
-                            <label><input type="checkbox" />I Agree To Terms and Conditions</label>
-                        </div>
-                        <button type="submit" class="subbutton">SIGN UP</button>
-                        <div class="loginandregister">
-                            <p>Already have an account?<a href="#" class="login-link">Sign in</a></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <div class="box">
+        <div class="page">
+          <div class="header">
+            <a id="login" class="active" href="#login">login</a>
+            <a id="signup" href="#signup">signup</a>
+          </div>
+          <div id="errorMsg"></div>
+          <div class="content">
+            <form
+              class="login"
+              name="loginForm"
+              onsubmit="return validateLoginForm()"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="name"
+                id="logName"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                id="logPassword"
+                placeholder="Password"
+              />
+              <div id="check">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Remember me</label>
+              </div>
+              <br /><br />
+              <input type="submit" value="Login" />
+              <a href="#">Forgot Password?</a>
+            </form>
+            <form
+              class="signup"
+              name="signupForm"
+              onsubmit="return validateSignupForm()"
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email"
+                id="signEmail"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                name="name"
+                id="signName"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                id="signPassword"
+                placeholder="Password"
+              /><br />
+              <input type="submit" value="SignUp" />
+            </form>
+          </div>
         </div>
+      </div>
     </section>
-    <section class="footer">
-        <div class="footer-box">
-            <h3>Services</h3>
-            <a href="questionnaire.html">Questionnaire</a>
-            <a href="latest.html">Latest</a>
-        </div>
-        <div class="footer-box">
-            <h3>About</h3>
-            <a href="about.html">About Us</a>
-        </div>
-        <div class="footer-box">
-            <h3>Help</h3>
-            <a href="">FAQs</a>
-            <a href="contact.html">Contact us</a>
-        </div>
-        <div class="footer-box">
-            <h3>Social</h3>
-            <div class="social">
-                <a href="https://www.instagram.com/"><i class="ri-instagram-fill"></i></a>
-                <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
-                <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
-            </div>
-        </div>
-    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script src="javascript/login.js"></script>
     <script>
         function validateLoginForm() {
