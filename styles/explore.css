@@ -185,25 +185,23 @@ header.sticky {
   transform: translateX(-4px);
 }
 
-
 @media (max-width: 1400px) {
-
   header {
     padding: 14px 2px;
   }
   header.sticky {
     padding: 7px 2px;
   }
-  .home{
+  .home {
     height: 1000px;
   }
   section {
     padding: 50px 8% 35px;
   }
-  .headings p{
+  .headings p {
     font-size: 18px;
-  font-weight: 500;
-  line-height: 20px;
+    font-weight: 500;
+    line-height: 20px;
   }
   .navigation {
     display: flex;
@@ -218,8 +216,6 @@ header.sticky {
     margin: 15px 10px;
     transition: all 0.5s ease;
   }
-
-  
 
   .navigation.active {
     display: flex; /* Show navigation when active */
@@ -252,7 +248,7 @@ header.sticky {
   .container4,
   .container5 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center; /* Center align items */
     margin: 20px; /* Adjust margin for smaller screens */
   }
@@ -266,24 +262,23 @@ header.sticky {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
-
   header {
     padding: 14px 2px;
   }
   header.sticky {
     padding: 7px 2px;
   }
-  .home{
+  .home {
     padding: 100px 8% 35px;
     height: 1000px;
   }
   section {
     padding: 50px 8% 35px;
   }
-  .headings p{
+  .headings p {
     font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
+    font-weight: 400;
+    line-height: 20px;
   }
   .navigation {
     display: flex;
@@ -299,7 +294,6 @@ header.sticky {
     transition: all 0.5s ease;
   }
 
-  
   .navigation {
     position: absolute;
     width: 100%;
@@ -388,7 +382,7 @@ header.sticky {
 
   /* .footer-box {
     flex: 1 1 100%; /* Stack footer boxes */
-    /* margin-bottom: 20px; /* Space between boxes  */
+  /* margin-bottom: 20px; /* Space between boxes  */
   /* }  */
 }
 
