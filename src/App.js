@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import Explore from './pages/explore';
 import Login from './pages/login';
 import Questionnaire from './pages/questionnaire';
+import FAQ from './pages/faq';
+import Contact from './pages/contact';
 import About from './pages/about';
 import Shooting from './pages/shooting';
 import Football from './pages/football';
@@ -23,6 +25,8 @@ function App() {
           <Route path="/explore" element={<Explore/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/latest" element={<Latest />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/questionnaire" element={<Questionnaire />} />
           <Route path="/about" element={<About/>}/>
           <Route path="/shooting" element={<Shooting />} />

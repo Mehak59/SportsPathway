@@ -1,29 +1,25 @@
 import React, { useState } from 'react';
-import './faq.css'; // Importing CSS
+import './faq.css'; // Ensure the CSS file is linked properly
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const faqData = [
     {
       question: "How do I find a local sports league or team?",
-      answer:
-        "You can find local sports leagues or teams by checking online directories, community centers, or sports facilities in your area."
+      answer: "You can find local sports leagues or teams by checking online directories, community centers, or sports facilities in your area."
     },
     {
       question: "How do I prepare for a sports competition?",
-      answer:
-        "To prepare for a sports competition, focus on training, nutrition, rest, and mental preparation."
+      answer: "To prepare for a sports competition, focus on training, nutrition, rest, and mental preparation."
     },
     {
       question: "How can I manage stress and anxiety before a competition?",
-      answer:
-        "You can manage stress and anxiety before a sports competition by practicing relaxation techniques, focusing on positive thoughts, and visualizing success."
+      answer: "You can manage stress and anxiety before a sports competition by practicing relaxation techniques, focusing on positive thoughts, and visualizing success."
     },
     {
       question: "How can I handle disagreements or conflicts with other players or officials?",
-      answer:
-        "Approach disagreements or conflicts calmly, communicate respectfully, and seek solutions together."
+      answer: "Approach disagreements or conflicts calmly, communicate respectfully, and seek solutions together."
     },
     {
       question: "What are some basic warmup exercises?",
@@ -38,52 +34,35 @@ const FAQ = () => {
     },
     {
       question: "What is sports psychology and how can it help me?",
-      answer:
-        "Sports psychology is the study of how psychological factors affect athletic performance. It can help you improve your mental skills, manage stress, and enhance your overall performance."
+      answer: "Sports psychology is the study of how psychological factors affect athletic performance. It can help you improve your mental skills, manage stress, and enhance your overall performance."
     },
     {
-      question: "How can I prepare myself before a tournament?",
-      answer:
-        "Preparing for a tournament requires a holistic approach. Prioritize regular training sessions to improve your skills and fitness. Fuel your body with a balanced diet to provide the necessary energy and nutrients. Ensure you get enough rest to allow your body to recover and prevent injuries. Additionally, work on your mental preparation through techniques like visualization, positive affirmations, and stress management to boost your confidence and focus."
+      question: "How can I prepare myself before a Tournament?",
+      answer: "Preparing for a tournament requires a holistic approach. Prioritize regular training sessions to improve your skills and fitness. Fuel your body with a balanced diet to provide the necessary energy and nutrients. Ensure you get enough rest to allow your body to recover and prevent injuries. Additionally, work on your mental preparation through techniques like visualization, positive affirmations, and stress management to boost your confidence and focus."
     }
   ];
 
-  const toggleAnswer = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleAnswer = index => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div>
-      <section className="faq1">
-        <div className="headings">
-          <h1>FAQ</h1>
-          <p>
-            Frequently Asked Questions (FAQs) are a collection of commonly asked questions and their answers related to a particular topic
-            or subject. FAQs are often used to provide quick and easy access to information, and can be found on websites, in documentation,
-            and in other forms of communication. They are a valuable resource for anyone who needs to learn more about a particular topic,
-            and can be used to save time and effort.
-          </p>
+    <section className="faq-container">
+      <h1>Frequently Asked Questions</h1>
+      {faqData.map((item, index) => (
+        <div key={index} className="faq-item">
+          <h4 className="faq-question" onClick={() => toggleAnswer(index)}>
+            {item.question}
+          </h4>
+          <div
+            className="faq-answer"
+            style={{ display: activeIndex === index ? 'block' : 'none' }}
+          >
+            <p className="para">{item.answer}</p>
+          </div>
         </div>
-      </section>
-
-      <section className="contact">
-        <div className="faq-container">
-          <h1>Frequently Asked Questions</h1>
-          {faqData.map((item, index) => (
-            <div className="faq-item" key={index}>
-              <h4 className="faq-question" onClick={() => toggleAnswer(index)}>
-                {item.question}
-              </h4>
-              {openIndex === index && (
-                <div className="faq-answer">
-                  <p className="para">{item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
+      ))}
+    </section>
   );
 };
 
