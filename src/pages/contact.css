@@ -8,68 +8,6 @@ body {
   margin: 0;
 }
 
-header {
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.5s ease;
-}
-
-.logo {
-  margin-left: 50px;
-}
-
-.navigation {
-  display: flex;
-  list-style: none;
-  margin-right: 20px;
-}
-
-.navigation a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  margin: 15px 15px;
-  transition: all 0.5s ease;
-}
-
-.navigation a:hover {
-  color: coral;
-}
-.navigation.open {
-  transform: translateX(0); /* This will show the navigation when open */
-}
-.navtabs {
-  display: flex;
-  margin-right: 50px;
-}
-
-.navtabs a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  margin: 0 5px;
-  transition: all 0.5s ease;
-}
-
-.navtabs a:hover {
-  color: coral;
-  transform: translateY(-3px);
-}
-
-#menu {
-  color: white;
-  font-size: 25px;
-  cursor: pointer;
-  display: none;
-  position: relative;
-}
-
 section {
   padding: 20px 650px 10px 120px;
 }
@@ -101,57 +39,6 @@ section {
   margin-bottom: 20px;
 }
 
-header.sticky {
-  background: transparent;
-  backdrop-filter: blur(35px);
-}
-
-.footer {
-  margin-top: 40px;
-  background-color: rgb(26, 25, 25);
-  position: relative;
-  padding: 50px 0 10px 120px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  gap: 9rem;
-}
-.footer-box {
-  display: flex;
-  flex-direction: column;
-}
-.footer-box h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-.footer-box a {
-  color: lightgray;
-  margin-bottom: 0.8rem;
-  text-decoration: none;
-  transition: all 0.5s ease;
-}
-.footer-box a:hover {
-  transform: translateX(-5px);
-  color: coral;
-}
-.social a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  width: 45px;
-  background-color: rgb(83, 80, 80);
-  color: white;
-  font-size: 20px;
-  border-radius: 50%;
-  margin-right: 8px;
-  transition: transform 0.6s;
-}
-.social a:hover {
-  background: coral;
-  color: black;
-  transform: translateX(-4px);
-}
 @media (max-width: 1700px) {
 }
 

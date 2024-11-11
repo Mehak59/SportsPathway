@@ -47,6 +47,20 @@ const FAQ = () => {
   };
 
   return (
+    <div>
+    <section className="faq1">
+        <div class="headings">
+            <h1>FAQ</h1>
+            <p>
+                Frequently Asked Questions (FAQs) are a collection of commonly asked questions and their answers related to a particular topic 
+                or subject. FAQs are often used to provide quick and easy access to information, and can be found on websites, in documentation, 
+                and in other forms of communication. They are a valuable resource for anyone who needs to learn more about a particular topic, 
+                and can be used to save time and effort.
+            </p>
+        </div>
+        </section>
+
+
     <section className="faq-container">
       <h1>Frequently Asked Questions</h1>
       {faqData.map((item, index) => (
@@ -63,6 +77,7 @@ const FAQ = () => {
         </div>
       ))}
     </section>
+    </div>
   );
 };
 
