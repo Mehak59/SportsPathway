@@ -30,7 +30,7 @@ const Explore = () => {
               <p>
                 The beautiful game. Known for its tactical complexity and
                 passionate fans.
-                <center><a href="football.html">Learn more</a></center>
+                <center><Link to="/football">Learn More</Link></center>
               </p>
             </div>
           </div>
@@ -41,11 +41,10 @@ const Explore = () => {
               <p>
                 A fast-paced and technical racket sport requiring agility and
                 precision.
-                <center><a href="badminton.html">Learn more</a></center>
+                <center><Link to="/badminton">Learn More</Link></center>
               </p>
             </div>
           </div>
-          {/* Add remaining cards following this pattern */}
           <div class="explore-card" onclick="location.href='#'">
           <img src="assets/ttennis.jpg" alt="Table Tennis" />
 
@@ -54,7 +53,7 @@ const Explore = () => {
             <p>
               A thrilling game of reflexes and strategy played on a miniature
               court.
-              <center><a href="tabletennis.html">Learn more</a></center>
+              <center><Link to="/tabletennis">Learn More</Link></center>
             </p>
           </div>
         </div>
@@ -71,7 +70,7 @@ const Explore = () => {
             <p>
               The elegant duel. Known for its strategic finesse, intense
               rallies, and individual brilliance.
-              <center><a href="tennis.html">Learn more</a></center>
+              <center><Link to="/tennis">Learn More</Link></center>
             </p>
           </div>
         </div>
@@ -84,7 +83,7 @@ const Explore = () => {
               The fast-paced challenge. Known for its agility, quick reflexes,
               and relentless endurance within the confines of a glass-walled
               court.
-              <center><a href="squash.html">Learn more</a></center>
+              <center><Link to="/squash">Learn More</Link></center>
             </p>
           </div>
         </div>
@@ -96,7 +95,7 @@ const Explore = () => {
             <p>
               The art of precision. Known for its focus, steady hand, and the
               pursuit of the perfect shot in complete silence.
-              <center><a href="archery.html">Learn more</a></center>
+              <center><Link to="/archery">Learn More</Link></center>
             </p>
           </div>
         </div>
@@ -111,7 +110,7 @@ const Explore = () => {
               The serene pursuit. Known for its blend of mental fortitude,
               precision, and the challenge of mastering the landscape with every
               swing.
-              <center><a href="golf.html">Learn more</a></center>
+              <center><Link to="/golf">Learn More</Link></center>
             </p>
           </div>
         </div>
@@ -124,7 +123,7 @@ const Explore = () => {
               The power of flight. Known for its explosive strength, perfect
               technique, and the quest to send the spear soaring as far as
               possible.
-              <center><a href="javelin2.html">Learn more</a></center>
+              <center><Link to="/javelinthrow">Learn More</Link></center>
             </p>
           </div>
         </div>

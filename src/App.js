@@ -15,6 +15,8 @@ import Football from './pages/football';
 import Badminton from './pages/badminton';
 import TableTennis from './pages/tabletennis';
 import Tennis from './pages/tennis';
+import Squash from './pages/squash';
+import Archery from './pages/archery';
 function App() {
   return (
     <Router>
@@ -34,6 +36,8 @@ function App() {
           <Route path="/badminton" element={<Badminton />} />
           <Route path="/tabletennis" element={<TableTennis />} />
           <Route path="/tennis" element={<Tennis />} />
+          <Route path="/squash" element={<Squash />} />
+          <Route path="/archery" element={<Archery />} />
         </Routes>
       </div>
       <Footer/>
