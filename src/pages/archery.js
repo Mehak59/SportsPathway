@@ -13,8 +13,6 @@ const Archery = () => {
           </p>
         </div>
       </section>
-
-      {/* 1st Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="assets/archery1.jpg" width="480px" height="430px" alt="Archery" />
@@ -26,8 +24,6 @@ const Archery = () => {
           </p>
         </div>
       </section>
-
-      {/* 2nd Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>EQUIPMENT USED</h5>
@@ -41,8 +37,6 @@ const Archery = () => {
           <img src="games/archery/arc2.jpg" width="480px" height="430px" alt="Archery Equipment" />
         </div>
       </section>
-
-      {/* 3rd Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="games/archery/arc3.jpg" width="480px" height="430px" alt="Archery in Action" />
@@ -54,8 +48,6 @@ const Archery = () => {
           </p>
         </div>
       </section>
-
-      {/* 4th Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>HOW ARE POINTS SCORED?</h5>
@@ -67,8 +59,6 @@ const Archery = () => {
           <img src="games/archery/arc9.jpg" width="480px" height="430px" alt="Archery Target" />
         </div>
       </section>
-
-      {/* 5th Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="games/archery/arc8.jpg" width="480px" height="430px" alt="Archery Event" />
@@ -80,8 +70,6 @@ const Archery = () => {
           </p>
         </div>
       </section>
-
-      {/* 6th Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>KEY TECHNIQUES</h5>
@@ -93,8 +81,6 @@ const Archery = () => {
           <img src="games/archery/arc3.jpg" width="480px" height="430px" alt="Archery Techniques" />
         </div>
       </section>
-
-      {/* 7th Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="games/archery/arc6.jpeg" width="480px" height="430px" alt="Archery Training" />
@@ -106,8 +92,6 @@ const Archery = () => {
           </p>
         </div>
       </section>
-
-      {/* 8th Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>INTERESTING FACTS</h5>

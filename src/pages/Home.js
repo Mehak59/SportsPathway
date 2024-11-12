@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
@@ -55,7 +56,7 @@ class Home extends Component {
               perfect fit, whether you're looking to stay active, compete, or just
               enjoy yourself.
             </p>
-            <button className="btn" onClick={this.handleQuizClick}>Take Quiz</button>
+            <button className="btn" onClick={this.handleQuizClick}><Link to="/questionnaire">Take Quiz</Link></button>
           </div>
         </section>
         <section className="categories">

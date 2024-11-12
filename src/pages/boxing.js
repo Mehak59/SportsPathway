@@ -13,8 +13,6 @@ const Boxing = () => {
           </p>
         </div>
       </section>
-
-      {/* 1st Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="assets/box1.jpeg" width="480px" height="430px" alt="Boxing" />
@@ -26,8 +24,6 @@ const Boxing = () => {
           </p>
         </div>
       </section>
-
-      {/* 2nd Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>EQUIPMENT USED</h5>
@@ -41,8 +37,6 @@ const Boxing = () => {
           <img src="assets/box2.jpeg" width="480px" height="430px" alt="Boxing Gear" />
         </div>
       </section>
-
-      {/* 3rd Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="assets/box3.avif" width="480px" height="430px" alt="Boxing Action" />
@@ -54,8 +48,6 @@ const Boxing = () => {
           </p>
         </div>
       </section>
-
-      {/* 4th Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>HOW IS IT SCORED?</h5>
@@ -67,8 +59,6 @@ const Boxing = () => {
           <img src="assets/box4.jpg" width="480px" height="430px" alt="Boxing Scoring" />
         </div>
       </section>
-
-      {/* 5th Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="assets/box5.avif" width="480px" height="430px" alt="History of Boxing" />
@@ -80,8 +70,6 @@ const Boxing = () => {
           </p>
         </div>
       </section>
-
-      {/* 6th Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>KEY TECHNIQUES</h5>
@@ -93,8 +81,6 @@ const Boxing = () => {
           <img src="assets/box7.jpg" width="480px" height="430px" alt="Boxing Techniques" />
         </div>
       </section>
-
-      {/* 7th Section */}
       <section className="sports-content">
         <div className="sport-content-image">
           <img src="assets/box6.webp" width="480px" height="430px" alt="Boxing Training" />
@@ -106,8 +92,6 @@ const Boxing = () => {
           </p>
         </div>
       </section>
-
-      {/* 8th Section */}
       <section className="sports-content2">
         <div className="sports-content-text2">
           <h5>INTERESTING FACTS</h5>
