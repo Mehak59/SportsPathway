@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportsPathway</title>
+    <link rel="stylesheet" href="styles/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"
+        ><img src="images/logo.png" width="200px" height="110px"
+      /></a>
+      <ul class="navigation">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="explore.html">EXPLORE</a></li>
+        <li><a href="latest.html">LATEST</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="questionnaire.html">QUESTIONNAIRE</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+      <div class="navtabs">
+        <a href="">Follow us</a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="ri-instagram-fill"></i
+        ></a>
+        <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
+        <a href="https://www.facebook.com/"><i class="ri-facebook-fill"></i></a>
+        <div class="bx bx-menu" id="menu"></div>
+      </div>
+    </header>
+    <section class="home">
+      <div class="box">
+        <div class="page">
+          <div class="header">
+            <a id="login" class="active" href="#login">login</a>
+            <a id="signup" href="#signup">signup</a>
+          </div>
+          <div id="errorMsg"></div>
+          <div class="content">
+            <form
+              class="login"
+              name="loginForm"
+              onsubmit="return validateLoginForm()"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="name"
+                id="logName"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                id="logPassword"
+                placeholder="Password"
+              />
+              <div id="check">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Remember me</label>
+              </div>
+              <br /><br />
+              <input type="submit" value="Login" />
+              <a href="#">Forgot Password?</a>
+            </form>
+            <form
+              class="signup"
+              name="signupForm"
+              onsubmit="return validateSignupForm()"
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email"
+                id="signEmail"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                name="name"
+                id="signName"
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                id="signPassword"
+                placeholder="Password"
+              /><br />
+              <input type="submit" value="SignUp" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="footer-box">
+        <h3>Services</h3>
+        <a href="questionnaire.html">Questionnaire</a>
+        <a href="latest.html">Latest</a>
+      </div>
+      <div class="footer-box">
+        <h3>About</h3>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-box">
+        <h3>Help</h3>
+        <a href="FAQ.html">FAQs</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      <div class="footer-box">
+        <h3>Social</h3>
+        <div class="social">
+          <a href="https://www.instagram.com/"
+            ><i class="ri-instagram-fill"></i
+          ></a>
+          <a href="https://x.com/"><i class="ri-twitter-x-fill"></i></a>
+          <a href="https://www.facebook.com/"
+            ><i class="ri-facebook-fill"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/login.js"></script>
+  </body>
+</html>
